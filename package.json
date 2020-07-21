@@ -1,16 +1,25 @@
 {
-    "name": "platform",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "name": "ant-design-pro-blazor",
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "An enterprise-class UI components based on Ant Design and Blazor",
+    "keywords": [
+        "ant",
+        "design",
+        "blazor",
+        "ui",
+        "framework",
+        "frontend",
+        "WebAssembly"
+      ],
     "scripts": {
         "start": "dotnet watch run",
         "build": "dotnet publish -o dist",
         "gulp:pro": "gulp --gulpfile ./src/AntDesign.Pro/gulpfile.js",
+        "gulp:layout": "gulp --gulpfile ./src/AntDesign.Pro.Layout/gulpfile.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
-    "license": "ISC",
     "dependencies": {
         "@ant-design/icons": "^4.0.0",
         "@ant-design/pro-layout": "^6.0.0",

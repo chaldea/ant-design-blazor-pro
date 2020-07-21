@@ -27,6 +27,8 @@ namespace AntDesign.Pro
                 options.ResourcesPath = "Localization";
             });
 
+            builder.Services.AddSingleton<IChartService, ChartService>();
+
             await builder.Build().RunAsync();
         }
     }

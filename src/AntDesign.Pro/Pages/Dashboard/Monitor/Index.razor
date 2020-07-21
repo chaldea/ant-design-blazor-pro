@@ -22,7 +22,7 @@
                 <ActiveChart />
             </Card>
             <Card Title="@("Efficiency")">
-                <Gauge Title="Ratio" Height="180" Percent="81" />
+                @* <Gauge Title="Ratio" Height="180" Percent="81" /> *@
             </Card>
         </AntDesign.Col>
     </Row>
@@ -32,13 +32,13 @@
             <Card Title="@("Proportion Per Category")" Class="pieCard">
                 <Row Style="padding: 16px 0;">
                     <AntDesign.Col Span="8">
-                        <Pie LineWidth="2" />
+                        @* <Pie LineWidth="2" /> *@
                     </AntDesign.Col>
                     <AntDesign.Col Span="8">
-                        <Pie LineWidth="2" />
+                        @* <Pie LineWidth="2" /> *@
                     </AntDesign.Col>
                     <AntDesign.Col Span="8">
-                        <Pie LineWidth="2" />
+                        @* <Pie LineWidth="2" /> *@
                     </AntDesign.Col>
                 </Row>
             </Card>
@@ -60,9 +60,4 @@
 @code
 {
     public string[] Tags = new[] { "tset1" };
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await jsRuntime.InvokeVoidAsync("antPro.monitorCharts");
-    }
 }

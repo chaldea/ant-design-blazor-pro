@@ -1,8 +1,30 @@
 ﻿@namespace AntDesign.Pro.Template.Pages.User
+@layout UserLayout
 @page "/user/register-result"
 
-<h3>RegisterResult</h3>
-
-@code {
-
-}
+<Result 
+    Class="registerResult"
+    Status="success">
+    <TitleTemplate>
+        <div class="title">
+            Account：registered at
+        </div>
+    </TitleTemplate>
+    <SubTitleTemplate>
+        The activation email has been sent to your email address and is valid for 24 hours. Please log in to the email in time and click on the link in the email to activate the account.
+    </SubTitleTemplate>
+    <Extra>
+        <div class="actions">
+            <a href="">
+                <Button Size="large" Type="primary">
+                    View mailbox
+                </Button>
+            </a>
+            <a href="/">
+                <Button Size="large">
+                    Back to home
+                </Button>
+            </a>
+        </div>
+    </Extra>
+</Result>

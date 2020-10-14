@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Components;
 
 namespace AntDesign.Pro.Template.Pages.User
 {
@@ -24,8 +25,12 @@ namespace AntDesign.Pro.Template.Pages.User
     {
         private readonly RegisterModel _user = new RegisterModel();
 
-        public void Reg()
+        [Inject]
+        protected NavigationManager NavigationManager { get; set; }
+
+        public void HandleSubmit()
         {
+            NavigationManager.NavigateTo("/user/register-result");
         }
     }
 }
